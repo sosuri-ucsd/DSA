@@ -2,7 +2,7 @@
 def anagram(s1,s2):
     return sorted(list(iter(s1))) == sorted(list(iter(s2)))
 
-# O(n) + easiest solution if we are allowed to import
+# O(n) + easiest solution if we are allowed to import 
 from collections import Counter
 def anagram(s1, s2):
     return Counter(s1) == Counter (s2)
