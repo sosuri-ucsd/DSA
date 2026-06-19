@@ -1,4 +1,4 @@
-# Checks if a number is a prime number
+# Checks if a number is a prime number (Brute)
 def prime(x):
     lst = []
     for i in range(1, int(x**0.5)+1):
