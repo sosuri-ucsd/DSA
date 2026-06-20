@@ -1,4 +1,4 @@
-# Checks if two strings are anagrams (O(n**2))
+# Checks if two strings are anagrams (O(n logn))
 def anagram(s1,s2):
     return sorted(list(iter(s1))) == sorted(list(iter(s2)))
 
