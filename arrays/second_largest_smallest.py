@@ -3,22 +3,26 @@ def second_largest_smallest(arr):
     if len(arr) <= 1:
         return (-1, -1)
     
-    small = float('inf')
-    second_small = float('inf')
-    large = float('-inf')
-    second_large = float('-inf')
-    for i in arr:
-        small = min(small, arr[i])
-        large = max(large, arr[i])
+    largest, second_largest = float('-inf'), float('-inf')
+    smallest, second_smallest = float('inf'), float('inf')
     
-    for i in range(n):
-        if arr[i] < second_small and arr[i] != small:
-            second_small = arr[i]
-        if arr[i] > second_large and arr[i] != large:
-            second_large = arr[i] 
+    for elem in arr:
+        # update largest and second largest
+        if elem > largest:
+            second_largest = largest
+            largest = elem
+        elif elem > second_largest and elem != largest:
+            second_largest = elem
+        
+        # update smallest and second smallest
+        if elem < smallest:
+            second_smallest = smallest
+            smallest = elem
+        elif elem < second_smallest and elem != smallest:
+            second_smallest = elem
     
-    print("Second smallest is", second_small)
-    print("Second largest is", second_large)
-
+    if second_largest == float('-inf') or second_smallest == float('inf'):
+        return (-1, -1)
     
+    return (second_smallest, second_largest)
     
