@@ -1,3 +1,4 @@
+# Selection sort
 def selection(lst):
     for i in range(len(lst)-1):
         minpos = i
