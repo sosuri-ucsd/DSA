@@ -6,8 +6,5 @@ def selection(lst):
             if lst[j] < lst[minpos]:
                 minpos = j
         
-        temp = lst[i]
-        lst[i] = lst[minpos]
-        lst[minpos] = temp
-        
+        lst[i], lst[minpos] = lst[minpos], lst[i]
     return lst
