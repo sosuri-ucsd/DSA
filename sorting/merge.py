@@ -1,30 +1,29 @@
-def merge(lst, low, mid, high):
-    temp = []
-    left, right = low, mid + 1
-    while left <= mid and right <= high:
-        if lst[left] <= lst[right]:
-            temp.append(lst[left])
-            left += 1
+def merge(left, right):
+    result = []
+    i, j = 0, 0
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i += 1
         else:
-            temp.append(lst[right])
-            right += 1
-    while left <= mid:
-        temp.append(lst[left])
-        left += 1
-    while right <= high:
-        temp.append(lst[right])
-        right += 1
-    for i in range(low, high + 1):
-        lst[i] = temp[i - low]
+            result.append(right[j])
+            j += 1
     
-def merge_sort(arr, low, high):
-    if low >= high:
-        return
-    mid = (low + high) // 2
-    merge_sort(arr, low, mid)
-    merge_sort(arr, mid + 1, high)
-    merge(arr, low, mid, high)
+    if i < len(left):
+        result.extend(left[i:])
 
-
-
+    if j < len(right):
+        result.extend(right[j:])
     
+    return result
+
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left_arr = arr[:mid]
+    right_arr = arr[mid:]
+    left_new = merge_sort(left_arr)
+    right_new = merge_sort(right_arr)
+    return merge(left_new, right_new)
+
