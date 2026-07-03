@@ -1,4 +1,4 @@
-# Quick Sort
+# Quick Sort (TBD)
 def partition(nums, low, high):
     pivot = nums[low]
     i = low
