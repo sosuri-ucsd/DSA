@@ -26,3 +26,19 @@ def second_largest_smallest(arr):
     
     return (second_smallest, second_largest)
     
+
+
+
+
+
+
+def second_largest(arr):
+    largest = float('-inf')
+    sec = float('-inf')
+    for i in range(len(arr)):
+        if arr[i] > largest:
+            sec = largest
+            largest = arr[i]
+        elif arr[i] > sec and arr[i] < largest:
+            sec = arr[i]
+    return sec
