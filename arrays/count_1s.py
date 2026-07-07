@@ -1,4 +1,3 @@
-# Give an array that contains only 1 and   the count of maximum consecutive ones in the array.
 def count_consective_ones(nums):
     count = 0
     maxi = 0
