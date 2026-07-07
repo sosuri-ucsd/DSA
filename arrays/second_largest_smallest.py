@@ -28,10 +28,6 @@ def second_largest_smallest(arr):
     
 
 
-
-
-
-
 def second_largest(arr):
     largest = float('-inf')
     sec = float('-inf')

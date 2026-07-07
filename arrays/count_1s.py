@@ -1,4 +1,4 @@
-# Given an array that contains only 1 and 0 return the count of maximum consecutive ones in the array.
+# Give an array that contains only 1 and 0 return the count of maximum consecutive ones in the array.
 def count_consective_ones(nums):
     count = 0
     maxi = 0
