@@ -1,5 +1,5 @@
 def missing_number(nums): # BRUTE
-    n = len(nums):
+    n = len(nums)
     for i in range(n):
         if i not in nums:
             return i
