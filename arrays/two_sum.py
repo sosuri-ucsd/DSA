@@ -13,13 +13,14 @@ def two_sum(nums, target):
 def two_sum(nums, target):
      hm = {}
      for i, num in enumerate(nums):
-          complement = target - num
-          if complement in hm:
-               return [hm[complement], i]
+          remaining = target - num
+          if remaining in hm:
+               return [hm[remaining], i]
           else:
-               hm[num] = i
+               hm[num] = i 
      return [-1, -1]
-
+        
+          
 
 def two_sum(arr, target):
      for i in range(0, len(arr) - 1):
