@@ -1,10 +1,11 @@
 def count_consective_ones(nums):
-    count = 0
-    maxi = 0
-    for i in range(len(nums)):
-        if nums[i] == 1:
+    count = 0 
+    max_count = 0
+    for num in nums:
+        if num == 1:
             count += 1
         else:
             count = 0
-        maxi = max(maxi, count)
-    return maxi
+            max_count = max(max_count, count)
+    return max_count
+        
