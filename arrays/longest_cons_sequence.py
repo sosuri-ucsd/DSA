@@ -24,4 +24,20 @@ def longest_sequence2(nums):
             count = 1
             last_smaller = num
         longest = max(longest, count)
-    return longest  
+    return longest
+
+
+def longest_sequence3(arr):
+    my_set = set()
+    for i in arr:
+        my_set.add(i)
+
+    longest = 0
+    count = 0
+    
+    for num in my_set:
+        if num - 1 not in my_set:
+            x = num
+            count = 1
+            while x + 1 in my_set:
+                
