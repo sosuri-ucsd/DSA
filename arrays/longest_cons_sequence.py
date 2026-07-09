@@ -40,4 +40,9 @@ def longest_sequence3(arr):
             x = num
             count = 1
             while x + 1 in my_set:
-                
+                count += 1
+                x += 1
+            longest = max(longest, count)
+    return longest
+
+
