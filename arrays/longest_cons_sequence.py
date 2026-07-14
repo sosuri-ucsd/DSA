@@ -29,20 +29,17 @@ def longest_sequence2(nums):
 
 def longest_sequence3(arr):
     my_set = set()
-    for i in arr:
-        my_set.add(i)
-
+    for elem in arr:
+        my_set.add(elem)
     longest = 0
     count = 0
-    
-    for num in my_set:
-        if num - 1 not in my_set:
-            x = num
+    for elem in my_set:
+        if elem - 1 not in my_set:
             count = 1
+            x = elem
             while x + 1 in my_set:
-                count += 1
+                count += 1 
                 x += 1
             longest = max(longest, count)
     return longest
-
 
