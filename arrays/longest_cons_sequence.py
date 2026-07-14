@@ -27,6 +27,8 @@ def longest_sequence2(nums):
     return longest
 
 
+
+# OPTIMAL
 def longest_sequence3(arr):
     my_set = set()
     for elem in arr:
