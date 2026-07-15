@@ -44,4 +44,5 @@ def longest_sequence3(arr):
                 x += 1
             longest = max(longest, count)
     return longest
-
+ 
+  
