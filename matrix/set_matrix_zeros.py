@@ -35,6 +35,6 @@ def set_matrix_zeros(matrix):
     for i in range(r):
         for j in range(c):
             if rowtrack[i] == -1 or coltrack[j] == -1:
-                matrix[i][j] = 0    
+                matrix[i][j] = 0  
     
  
