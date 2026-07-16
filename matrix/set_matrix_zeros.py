@@ -25,3 +25,4 @@ def mark_inf(matrix, row, col):
 
     
     
+ 
