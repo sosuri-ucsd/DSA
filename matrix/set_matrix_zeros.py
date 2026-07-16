@@ -10,6 +10,7 @@ def set_matrix_zeros(matrix):
         for j in range(c):
             if matrix[i][j] == float("-inf"):
                 matrix[i][j] = 0
+    
 def mark_inf(matrix, row, col):
     r = len(matrix)
     c = len(matrix[0])
