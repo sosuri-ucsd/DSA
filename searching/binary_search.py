@@ -1,4 +1,4 @@
-def binary_search(arr, target):
+def binary_search(arr, target): # Iterative
     low = 0
     high = len(arr)-1
     while low <= high:
@@ -12,3 +12,15 @@ def binary_search(arr, target):
     return -1
             
         
+def binary_search(arr, target, low, high): # Recursive
+    if low < high:
+        return -1
+    mid = (low + high) // 2
+    if arr[mid] == target:
+        return mid
+    elif arr[mid] < target:
+        binary_search(arr, target, mid+1, high)
+    else:
+        binary_search(arr, target, low, mid - 1)
+
+
