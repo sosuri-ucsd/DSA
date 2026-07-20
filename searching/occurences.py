@@ -2,7 +2,7 @@ def occurences(arr, target):
     def lower_bound(arr, target):
         low = 0
         high = len(arr) - 1
-        lb = len(arr)
+        lb = -1
         while low <= high:
             mid = low + (high - low) // 2
             if arr[mid] >= target:
@@ -28,4 +28,6 @@ def occurences(arr, target):
     lower = lower_bound(arr, target)
     upper = upper_bound(arr, target)
 
+    if lower == -1:
+        return 0
     return upper - lower
