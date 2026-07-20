@@ -4,7 +4,7 @@ def search_insert_pos(arr, target):
     high = len(arr) - 1
     lb = len(arr)
     while low <= high:
-        mid = (low + high) // 2
+        mid = low + (high - low) // 2
         if arr[mid] >= target:
             lb = mid
             high = mid - 1
