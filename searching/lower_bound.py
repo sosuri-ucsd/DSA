@@ -1,5 +1,5 @@
 def lower_bound(arr, target):
-    lb = -1
+    lb = len(arr)
     low = 0
     high = len(arr) - 1
     while low <= high:
