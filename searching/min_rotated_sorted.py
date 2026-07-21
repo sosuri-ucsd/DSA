@@ -9,6 +9,6 @@ def min_rotated_sorted_array(arr):
         else:
             mini = min(mini, arr[low])
             low = mid + 1
-    return mini.
+    return mini
  
 
