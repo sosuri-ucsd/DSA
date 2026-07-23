@@ -24,7 +24,7 @@ class SinglyLinkedList:
                 print(curr.val, end = " ")
                 curr = curr.next
             print()
-    def insert_at(self, val, position):
+    def insert(self, position, val):
         new_node = Node(val)
         if position == 0:
             new_node.next = self.head
@@ -83,6 +83,7 @@ node4.next = None
 print(node1.val)
 print(node1.next.val)
 print(node2) # Same as line above
+
 
 
 
