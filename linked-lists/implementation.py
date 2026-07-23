@@ -39,6 +39,26 @@ class SinglyLinkedList:
                 count += 1
             prev.next = new_node
             new_node.next = curr
+    def delete(self, val):
+        temp = self.head
+        if temp.next is not None:
+            if temp.val == val:
+                self.head = temp.next
+                return 
+            else:
+                found = False
+                prev = None
+                while temp is not None:
+                    if temp.val == val:
+                        found = True
+                        break
+                    prev = temp
+                    temp = temp.next
+            if found:
+                prev.next = temp.next
+                return 
+            else:
+                print("Node not found")
 
 
 
