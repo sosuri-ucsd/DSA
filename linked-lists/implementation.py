@@ -40,25 +40,24 @@ class SinglyLinkedList:
             prev.next = new_node
             new_node.next = curr
     def delete(self, val):
-        temp = self.head
-        if temp.next is not None:
-            if temp.val == val:
-                self.head = temp.next
-                return 
-            else:
-                found = False
-                prev = None
-                while temp is not None:
-                    if temp.val == val:
-                        found = True
-                        break
-                    prev = temp
-                    temp = temp.next
-            if found:
-                prev.next = temp.next
-                return 
-            else:
-                print("Node not found")
+        if self.head is None:
+            print("Not Found")
+            return
+        if self.head.val == val:
+            self.head = self.head.next
+            return
+        
+        prev = None
+        curr = self.head
+        while curr is not None:
+            if curr.val == val:
+                prev.next = curr.next
+                return
+            prev = curr
+            curr = curr.next
+
+        print("Not Found")
+
 
 node1 = Node(5)
 node2 = Node(10)
@@ -75,25 +74,6 @@ print(node1.next.val)
 print(node2) # Same as line above
 
 
-
-def delete(self, val):
-    if self.head is None:
-        print("Not Found")
-        return
-    if self.head.val == val:
-        self.head = self.head.next
-        return
-    
-    prev = None
-    curr = self.head
-    while curr is not None:
-        if curr.val == val:
-            prev.next = curr.next
-            return
-        prev = curr
-        curr = curr.next
-
-    print("Not Found")
 
 
 
