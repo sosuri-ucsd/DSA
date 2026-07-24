@@ -1,4 +1,4 @@
-# BRUTE
+# BRUTE O(N), O(N)
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -13,3 +13,13 @@ def linkedlist_cycle(self, head: ListNode) -> ListNode:
         my_set.add(temp)
         temp = temp.next
     return False
+
+
+# Optimal O(N), O(1)
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def linkedlist_cycle(self, head: ListNode) -> ListNode:
+    
