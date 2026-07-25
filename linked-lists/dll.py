@@ -78,29 +78,36 @@ class dll:
             current = current.next
         current.next = None
 
-    def delete_at_position(self, head, position):
+    def delete_at_position(self, position):
+        if self.head is None:
+            return "Not Found"
+
         if position == 0:
-            if self.head is None:
-                return "Not Found"
             if self.head.next is None:
                 self.head = None
                 return
-            self.head = self.head.next
-            self.head.prev = None
+            next_node = self.head.next
+            next_node.prev = None
+            self.head = next_node
             return
+
         current = self.head
         count = 0
-        while current is not None and count < position:
+        while current and count < position:
             current = current.next
             count += 1
 
         if current is None:
-            return "Not Found"
+            print("Position out of bounds")
+            return
 
-        if current.prev is not None:
-            current.prev.next = current.next
-        if current.next is not None:
-            current.next.prev = current.prev
+        prev_node = current.prev
+        next_node = current.next
+
+        if prev_node:
+            prev_node.next = next_node
+        if next_node:
+            next_node.prev = prev_node
                 
 
 
