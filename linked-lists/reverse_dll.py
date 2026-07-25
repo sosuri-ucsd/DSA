@@ -19,4 +19,11 @@ def reverse_dll(self, head: ListNode) -> ListNode:
     curr = head
     prev = None
     if curr.next is None:
-        
+        return head
+    while curr:
+        front = curr.next
+        curr.next = prev
+        curr.prev = front
+        prev = curr
+        curr = front
+    return prev
