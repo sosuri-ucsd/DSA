@@ -22,5 +22,27 @@ def pairs_given_sum(self, head, target):
         temp = temp.next
     return result
 
+def pairs_given_sum(self, head, target):
+    result = []
+    right = head
+    while right.next:
+        right = right.next
+    left = head
+    while left is not None and right is not None and left.val < right.val:
+        if left.val + right.val == target:
+            result.append([left.val, right.val])
+            left = left.next
+            right = right.prev
+        elif left.val + right.val > target:
+            right = right.prev
+        else:
+            left = left.next 
+    return result
+
+
+
+
+
+
 
 
