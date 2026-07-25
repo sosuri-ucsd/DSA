@@ -10,5 +10,17 @@ def pairs_given_sum(self, head, target):
         temp1 = temp1.next
     return result
 
+def pairs_given_sum(self, head, target):
+    my_set = set()
+    temp = head
+    result = []
+    while temp is not None:
+        remaining = target - temp.val
+        if remaining in my_set:
+            result.append([remaining, temp.val])
+        my_set.add(temp.val)
+        temp = temp.next
+    return result
+
 
 
