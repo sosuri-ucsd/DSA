@@ -67,6 +67,45 @@ class dll:
             self.head = self.head.next
             self.head.prev = None
 
+    def delete_last(self, head):
+        if self.head is None:
+            return "Not Found"
+        if self.head.next is None:
+            self.head = None
+            return
+        current = self.head
+        while current.next.next:
+            current = current.next
+        current.next = None
+
+    def delete_at_position(self, head, position):
+        if position == 0:
+            if self.head is None:
+                return "Not Found"
+            if self.head.next is None:
+                self.head = None
+                return
+            self.head = self.head.next
+            self.head.prev = None
+            return
+        current = self.head
+        count = 0
+        while current is not None and count < position:
+            current = current.next
+            count += 1
+
+        if current is None:
+            return "Not Found"
+
+        if current.prev is not None:
+            current.prev.next = current.next
+        if current.next is not None:
+            current.next.prev = current.prev
+                
+
+
+
+
     
 
 
