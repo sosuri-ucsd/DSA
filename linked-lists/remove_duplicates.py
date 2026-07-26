@@ -1,7 +1,7 @@
 def remove_duplicates(self, head):
     if head is None:
         return head
-    curr = hea
+    curr = head
     while curr and curr.next:
         if curr.val == curr.next.val:
             dup = curr.next
