@@ -9,7 +9,7 @@ def remove_duplicates(self, head):
             if dup.next:
                 dup.next.prev = curr
         curr = curr.next
-    return head
+    return hea
 
 
 
