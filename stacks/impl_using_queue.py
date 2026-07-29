@@ -1,7 +1,7 @@
 from collections import deque
 class StackUsingQueue:
     def __init__(self):
-        self.queue = deque
+        self.queue = deque()
     def push(self, item):
         self.queue.append(item)
         for _ in range(len(self.queue) - 1):
