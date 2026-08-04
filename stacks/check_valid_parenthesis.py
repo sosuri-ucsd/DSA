@@ -14,5 +14,5 @@ def check_valid(s):
             ):
                 continue
             else:
-                return Fals
+                return False
     return len(stack) == 0
