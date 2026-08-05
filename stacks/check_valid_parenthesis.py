@@ -15,4 +15,4 @@ def check_valid(s):
                 continue
             else:
                 return False
-    return len(stack) == 
+    return len(stack) == 0
