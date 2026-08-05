@@ -1,3 +1,4 @@
+# Check
 def check_valid(s):
     stack = []
     for bracket in s:
