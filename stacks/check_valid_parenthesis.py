@@ -1,4 +1,4 @@
-# Check
+# Check valid parenthesis
 def check_valid(s):
     stack = []
     for bracket in s:
