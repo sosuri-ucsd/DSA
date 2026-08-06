@@ -6,7 +6,7 @@ class Node:
         self.next = None
 
 
-class Stack:
+class Stack: # Stack
     def __init__(self):
         self.head = None
 
