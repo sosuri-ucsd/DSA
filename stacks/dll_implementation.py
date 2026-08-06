@@ -16,7 +16,7 @@ class Stack:
             self.head.prev = new_node
         self.head = new_node
 
-    def pop(self):
+    def pop(self)
         if self.head is None:
             return "Stack is empty"
         val = self.head.val
