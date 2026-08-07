@@ -27,7 +27,7 @@ class Stack: # Stack
         return val
 
     def peek(self):
-        return self.head.val if self.head else "Stack is empty"
+        return self.head.val if self.head else "Stack is empty :("
 
 
 class Queue:
