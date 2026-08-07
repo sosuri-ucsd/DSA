@@ -30,7 +30,7 @@ class Stack: # Stack
         return self.head.val if self.head else "Stack is empty"
 
 
-class Queue: # 
+class Queue: # Queueuueuueuee
     def __init__(self):
         self.head = None
         self.tail = None
